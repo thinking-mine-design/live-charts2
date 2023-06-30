@@ -134,8 +134,8 @@ public class ScatterSeries<TModel, TVisual, TLabel, TDrawingContext>
         var uwx = xScale.MeasureInPixels(secondaryAxis.UnitWidth);
         var uwy = yScale.MeasureInPixels(secondaryAxis.UnitWidth);
 
-        uwx = uwx < gs ? gs : uwx;
-        uwy = uwy < gs ? gs : uwy;
+        uwx = gs;//uwx < gs ? gs : uwx;
+        uwy = gs;//uwy < gs ? gs : uwy;
 
         var hy = chart.ControlSize.Height * .5f;
 
