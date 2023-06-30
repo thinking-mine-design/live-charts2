@@ -90,6 +90,8 @@ public class ScatterSeries<TModel, TVisual, TLabel, TDrawingContext>
     /// </summary>
     public bool IsWeighted { get; private set; }
 
+    public LvcPoint BorderRadius { get; set; } = new LvcPoint(10f, 10f);
+
     /// <inheritdoc cref="ChartElement{TDrawingContext}.Invalidate(Chart{TDrawingContext})"/>
     public override void Invalidate(Chart<TDrawingContext> chart)
     {
@@ -154,8 +156,10 @@ public class ScatterSeries<TModel, TVisual, TLabel, TDrawingContext>
                     visual.Y = y - hgs;
                     visual.Width = 0;
                     visual.Height = 0;
+                    visual.BorderRadius = BorderRadius;
                     visual.RemoveOnCompleted = true;
                     point.Context.Visual = null;
+
                 }
                 continue;
             }
@@ -173,7 +177,8 @@ public class ScatterSeries<TModel, TVisual, TLabel, TDrawingContext>
                     X = x,
                     Y = y,
                     Width = 0,
-                    Height = 0
+                    Height = 0,
+                    BorderRadius = BorderRadius
                 };
 
                 visual = r;

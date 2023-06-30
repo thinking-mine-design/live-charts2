@@ -43,7 +43,7 @@ public class RoundedRectangleGeometry : SizedGeometry, IRoundedGeometry<SkiaShar
     }
 
     /// <inheritdoc cref="IRoundedGeometry{TDrawingContext}.BorderRadius"/>
-    public LvcPoint BorderRadius { get => _borderRadius.GetMovement(this); set => _borderRadius.SetMovement(value, this); }
+    public override LvcPoint BorderRadius { get => _borderRadius.GetMovement(this); set => _borderRadius.SetMovement(value, this); }
 
     /// <inheritdoc cref="Geometry.OnDraw(SkiaSharpDrawingContext, SKPaint)" />
     public override void OnDraw(SkiaSharpDrawingContext context, SKPaint paint)

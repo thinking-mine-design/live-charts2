@@ -71,6 +71,8 @@ public abstract class SizedGeometry : Geometry, ISizedGeometry<SkiaSharpDrawingC
         }
     }
 
+    public virtual LvcPoint BorderRadius { get; set; }
+
     /// <inheritdoc cref="Geometry.OnMeasure(Paint)" />
     protected override LvcSize OnMeasure(Paint paint)
     {

@@ -45,4 +45,6 @@ public interface ISizedGeometry<TDrawingContext> : IGeometry<TDrawingContext>
     /// The height.
     /// </value>
     float Height { get; set; }
+
+    LvcPoint BorderRadius { get; set; }
 }
