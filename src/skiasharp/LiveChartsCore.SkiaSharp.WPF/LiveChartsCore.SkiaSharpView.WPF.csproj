@@ -15,6 +15,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <RepositoryUrl>https://github.com/beto-rodriguez/LiveCharts2</RepositoryUrl>
+	<NoWarn>8614,8622</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
